@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9509AAAC2899AF58006FE8E9 /* AppDBProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9509AAAB2899AF58006FE8E9 /* AppDBProject.swift */; };
+		9509AAAE2899B0B1006FE8E9 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9509AAAD2899B0B1006FE8E9 /* NetworkLayer.swift */; };
 		9579576A289982EF008E2199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95795769289982EF008E2199 /* AppDelegate.swift */; };
 		9579576C289982EF008E2199 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9579576B289982EF008E2199 /* SceneDelegate.swift */; };
 		9579576E289982EF008E2199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9579576D289982EF008E2199 /* ViewController.swift */; };
@@ -15,9 +17,18 @@
 		95795779289982F1008E2199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95795777289982F1008E2199 /* LaunchScreen.storyboard */; };
 		9579578228998394008E2199 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9579578128998394008E2199 /* Alamofire */; };
 		95795785289983A6008E2199 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 95795784289983A6008E2199 /* SnapKit */; };
+		957A17382899B3760031D402 /* AppDBProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957A17372899B3760031D402 /* AppDBProjectViewModel.swift */; };
+		957A173A2899C1760031D402 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957A17392899C1760031D402 /* ProjectTableViewCell.swift */; };
+		957A173C2899D1730031D402 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957A173B2899D1730031D402 /* CartManager.swift */; };
+		957A173E2899D1D50031D402 /* PersistentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957A173D2899D1D50031D402 /* PersistentController.swift */; };
+		957A17402899D4EB0031D402 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957A173F2899D4EB0031D402 /* CartViewModel.swift */; };
+		957A17422899DB7B0031D402 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957A17412899DB7B0031D402 /* CartViewController.swift */; };
+		957A17452899E07C0031D402 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957A17442899E07C0031D402 /* CartTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9509AAAB2899AF58006FE8E9 /* AppDBProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDBProject.swift; sourceTree = "<group>"; };
+		9509AAAD2899B0B1006FE8E9 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		95795766289982EF008E2199 /* My AppDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My AppDB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95795769289982EF008E2199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9579576B289982EF008E2199 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +37,13 @@
 		95795775289982F1008E2199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95795778289982F1008E2199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9579577A289982F1008E2199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		957A17372899B3760031D402 /* AppDBProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDBProjectViewModel.swift; sourceTree = "<group>"; };
+		957A17392899C1760031D402 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
+		957A173B2899D1730031D402 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		957A173D2899D1D50031D402 /* PersistentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentController.swift; sourceTree = "<group>"; };
+		957A173F2899D4EB0031D402 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		957A17412899DB7B0031D402 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		957A17442899E07C0031D402 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +59,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9509AAAA2899AF47006FE8E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9509AAAB2899AF58006FE8E9 /* AppDBProject.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9509AAAF2899B0C8006FE8E9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9509AAAD2899B0B1006FE8E9 /* NetworkLayer.swift */,
+				957A173B2899D1730031D402 /* CartManager.swift */,
+				957A173D2899D1D50031D402 /* PersistentController.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9509AAB02899B342006FE8E9 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				957A17372899B3760031D402 /* AppDBProjectViewModel.swift */,
+				957A173F2899D4EB0031D402 /* CartViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 		9579575D289982EF008E2199 = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +105,29 @@
 		95795768289982EF008E2199 /* My AppDB */ = {
 			isa = PBXGroup;
 			children = (
+				957A17432899DDF90031D402 /* Views */,
+				9509AAB02899B342006FE8E9 /* View Models */,
+				9509AAAF2899B0C8006FE8E9 /* Networking */,
+				9509AAAA2899AF47006FE8E9 /* Models */,
 				95795769289982EF008E2199 /* AppDelegate.swift */,
 				9579576B289982EF008E2199 /* SceneDelegate.swift */,
-				9579576D289982EF008E2199 /* ViewController.swift */,
 				95795775289982F1008E2199 /* Assets.xcassets */,
 				95795777289982F1008E2199 /* LaunchScreen.storyboard */,
 				9579577A289982F1008E2199 /* Info.plist */,
 				95795772289982EF008E2199 /* AppDB Cart.xcdatamodeld */,
 			);
 			path = "My AppDB";
+			sourceTree = "<group>";
+		};
+		957A17432899DDF90031D402 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9579576D289982EF008E2199 /* ViewController.swift */,
+				957A17392899C1760031D402 /* ProjectTableViewCell.swift */,
+				957A17412899DB7B0031D402 /* CartViewController.swift */,
+				957A17442899E07C0031D402 /* CartTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,10 +208,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				957A17382899B3760031D402 /* AppDBProjectViewModel.swift in Sources */,
+				957A173C2899D1730031D402 /* CartManager.swift in Sources */,
+				9509AAAE2899B0B1006FE8E9 /* NetworkLayer.swift in Sources */,
 				9579576E289982EF008E2199 /* ViewController.swift in Sources */,
+				957A17422899DB7B0031D402 /* CartViewController.swift in Sources */,
 				95795774289982EF008E2199 /* AppDB Cart.xcdatamodeld in Sources */,
 				9579576A289982EF008E2199 /* AppDelegate.swift in Sources */,
+				957A173E2899D1D50031D402 /* PersistentController.swift in Sources */,
 				9579576C289982EF008E2199 /* SceneDelegate.swift in Sources */,
+				957A17452899E07C0031D402 /* CartTableViewCell.swift in Sources */,
+				9509AAAC2899AF58006FE8E9 /* AppDBProject.swift in Sources */,
+				957A173A2899C1760031D402 /* ProjectTableViewCell.swift in Sources */,
+				957A17402899D4EB0031D402 /* CartViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

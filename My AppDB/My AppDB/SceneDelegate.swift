@@ -16,9 +16,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: scene)
         let mainVC = ViewController()
-        let navigationVC = UINavigationController(rootViewController: mainVC)
-        navigationVC.navigationBar.prefersLargeTitles = true
-        self.window?.rootViewController = navigationVC
+        let browseNC = UINavigationController(rootViewController: mainVC)
+        browseNC.navigationBar.prefersLargeTitles = true
+
+        let cartVC = CartViewController()
+        let cartNC = UINavigationController(rootViewController: cartVC)
+        cartNC.navigationBar.prefersLargeTitles = true
+
+        let tabs = UITabBarController()
+        browseNC.tabBarItem = .init(title: "Browse", image: UIImage(systemName: "star"), tag: 0)
+        cartNC.tabBarItem = .init(title: "Cart", image: UIImage(systemName: "cart"), tag: 1)
+        tabs.setViewControllers([browseNC, cartNC], animated: true)
+
+        self.window?.rootViewController = tabs
         self.window?.makeKeyAndVisible()
     }
 
