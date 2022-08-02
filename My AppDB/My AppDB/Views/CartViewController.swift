@@ -21,6 +21,7 @@ class CartViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         model.getData()
+        self.table.reloadData()
     }
 
     override func viewDidLoad() {
@@ -32,6 +33,7 @@ class CartViewController: UIViewController {
         table.delegate = self
         table.register(CartTableViewCell.self, forCellReuseIdentifier: CartTableViewCell.ReuseID)
 
+        // FIXME: This might not be binding correctly.
         model.bindUpdating {
             self.table.reloadData()
         }
@@ -42,21 +44,6 @@ class CartViewController: UIViewController {
         }
 
         model.getData()
-    }
-}
-
-extension CartViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        guard let item = self.model.getCartItem(at: indexPath.row) else { return nil }
-
-        let action = UIContextualAction(style: .destructive, title: "Remove from Cart") { whoAction, inView, actionPerformed in
-            self.model.removeCartItem(item)
-            actionPerformed(true)
-        }
-        action.image = UIImage(systemName: "trash")
-
-        return UISwipeActionsConfiguration(actions: [action])
-
     }
 }
 
@@ -74,5 +61,21 @@ extension CartViewController: UITableViewDataSource {
         }
         cell.configure(model: model, for: indexPath.row)
         return cell
+    }
+}
+
+extension CartViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        guard let item = self.model.getCartItem(at: indexPath.row) else { return nil }
+
+        let action = UIContextualAction(style: .destructive, title: "Remove from Cart") { whoAction, inView, actionPerformed in
+            self.model.removeCartItem(item)
+            actionPerformed(true)
+            self.table.reloadData()
+        }
+        action.image = UIImage(systemName: "trash")
+
+        return UISwipeActionsConfiguration(actions: [action])
+
     }
 }

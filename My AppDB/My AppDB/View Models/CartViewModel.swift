@@ -20,7 +20,7 @@ typealias CartViewModelType = ViewModelCapable & CartViewModelAttributes
 class CartViewModel {
     typealias UpdateHandlerType = () -> Void
 
-    private var cart = [CartItem]() {
+    private var shoppingCart = [CartItem]() {
         didSet {
             updateHandler?()
         }
@@ -37,24 +37,24 @@ class CartViewModel {
 // MARK: - View Model Capabilites
 extension CartViewModel: ViewModelCapable {
     func bindUpdating(handler: @escaping () -> Void) {
-        self.updateHandler = handler
+        updateHandler = handler
     }
 
     func getData() {
-        cart = provider.getCartItems()
+        shoppingCart = provider.getCartItems()
     }
 }
 
 // MARK: - Cart View Model Attributes
 extension CartViewModel: CartViewModelAttributes {
     var count: Int {
-        return cart.count
+        return shoppingCart.count
     }
 
     func getCartItem(at index: Int) -> CartItem? {
-        guard !cart.isEmpty else { return nil }
-        guard index < cart.count else { return nil }
-        return cart[index]
+        guard !shoppingCart.isEmpty else { return nil }
+        guard index < shoppingCart.count else { return nil }
+        return shoppingCart[index]
     }
 
     func getCartImage(from url: URLConvertible) async -> UIImage? {
@@ -68,6 +68,6 @@ extension CartViewModel: CartViewModelAttributes {
 
     func removeCartItem(_ item: CartItem) {
         provider.removeFromCart(item)
-        cart.removeAll { cartItem in cartItem.id == item.id }
+        shoppingCart.removeAll { cartItem in cartItem.id == item.id }
     }
 }
